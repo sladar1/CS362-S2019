@@ -93,6 +93,20 @@ int shuffle(int player, struct gameState *state);
 /* Assumes all cards are now in deck array (or hand/played):  discard is
  empty */
 
+
+/* Card effect functions */
+void playAdventurer(int currentPlayer, int* temphand, int z,
+		    int cardDrawn, int drawntreasure, struct gameState *state);
+
+void playCutpurse(int currentPlayer, int handPos, int i, int j, int k, struct gameState *state);
+
+void playSmithy(int currentPlayer, int handPos, int i, struct gameState *state); 
+
+void playSteward(int currentPlayer, int choice1, int choice2, int choice3, int handPos, struct gameState *state);
+
+void playVillage(int currentPlayer, int handPos, struct gameState *state);
+
+
 int playCard(int handPos, int choice1, int choice2, int choice3,
 	     struct gameState *state);
 /* Play card with index handPos from current player's hand */
